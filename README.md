@@ -34,11 +34,30 @@ Add this.state in constructor.
 
 2. Describe the different phases of the component lifecycle.
 
+1) Mounting
+2) Updating
+3) Ummounting
+
 3. Demonstrate an understanding of class component lifecycle methods.
+
+- constructor
+- getDerivedStateFromProps
+- render
+- componentDidMount
+- shouldComponentUpdate
+- getSnapshotBeforeUpdate
+- componentDidUpdate
+- componentWillUnmount
+
+
 
 4. Define stateful logic.
 
+- stateful logic is logic that deals with the state of a component, such as when and how a component's state should update
+
 5. Describe how to test a React component with React Testing Library.
+
+- make tests Arrange, Act, Assert
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
