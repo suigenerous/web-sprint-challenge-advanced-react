@@ -81,7 +81,4 @@ test("form shows success message on submit with form details", () => {
         index++;
     })
 
-    // expect there to be an element with text for each string in success message
-    randomStrings.forEach
-
 });
