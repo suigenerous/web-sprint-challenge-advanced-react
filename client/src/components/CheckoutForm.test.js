@@ -47,12 +47,41 @@ test("form shows success message on submit with form details", () => {
 
     const randomStrings = genStrings(fields.length);
 
+    // inputs random strings into each field
+
     fields.forEach((field) => {
         let index = 0;
         fireEvent.change(field, {target: {value: randomStrings[index]}});
         index++;
     })
 
+    // click checkout button 
+
+    const checkoutButton = screen.getByRole('button', {name: /checkout/i})
+
+    fireEvent.click(checkoutButton);
+
+    // find success message
+
+    const successMessage = screen.getByTestId("successMessage");
+
     // Assert
+
+    // success message is in document
+
+    expect(successMessage).toBeInTheDocument();
+
+    // data matches
+
+    const testIdsArr = ['firstName', 'lastName', 'address', 'city', 'state', 'zipcode'];
+
+    testIdsArr.forEach((id) => {
+        let index = 0;
+        expect(screen.getByTestId(id)).toHaveTextContent(randomStrings[index]);
+        index++;
+    })
+
+    // expect there to be an element with text for each string in success message
+    randomStrings.forEach
 
 });
